@@ -70,6 +70,10 @@
                     "description": "External Apps"
                 },
                 {
+                    "name": "Ghost Explore Integration",
+                    "description": "Internal Integration for the Ghost Explore directory"
+                },
+                {
                     "name": "DB Backup Integration",
                     "description": "Internal DB Backup Client"
                 },
@@ -82,6 +86,11 @@
         {
             "name": "Permission",
             "entries": [
+                {
+                    "name": "Read explore",
+                    "action_type": "read",
+                    "object_type": "explore"
+                },
                 {
                     "name": "Export database",
                     "action_type": "exportContent",
@@ -615,6 +624,13 @@
                     "api_keys": [{"type": "admin"}]
                 },
                 {
+                    "slug": "ghost-explore",
+                    "name": "Ghost Explore",
+                    "description": "Built-in Ghost Explore integration",
+                    "type": "internal",
+                    "api_keys": [{"type": "admin", "role": "Ghost Explore Integration"}]
+                },
+                {
                     "slug": "ghost-backup",
                     "name": "Ghost Backup",
                     "description": "Internal DB Backup integration",
@@ -685,6 +701,9 @@
                 },
                 "Scheduler Integration": {
                     "post": "publish"
+                },
+                "Ghost Explore Integration": {
+                    "explore": "read"
                 },
                 "Admin Integration": {
                     "mail": "all",
